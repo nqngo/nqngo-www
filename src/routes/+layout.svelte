@@ -1,17 +1,19 @@
 <script>
 	import Header from './Header.svelte';
-	import './styles.css';
+	import '../app.css';
+	import scanline from '$lib/images/scanline_pattern.png';
+	export const currentYear = new Date().getFullYear();
 </script>
 
-<div class="app">
+<div class="app" style="background-image: url({scanline})">
 	<Header />
 
 	<main>
 		<slot />
 	</main>
 
-	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<footer class="font-mono">
+		<p>Copyright © {currentYear} Nhat Ngo. All rights reserved.</p>
 	</footer>
 </div>
 
@@ -20,6 +22,7 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
+		background-color: #3a9bdc;
 	}
 
 	main {
@@ -39,10 +42,6 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
 	}
 
 	@media (min-width: 480px) {
