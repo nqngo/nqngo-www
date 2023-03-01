@@ -7,7 +7,7 @@
 	<meta name="description" content="Nhat Ngo" />
 </svelte:head>
 
-<section class="font-mono">
+<section>
 	<h1 id="greeting" class="md:text-8xl text-6xl font-extrabold">
 	<p>Hi!</p>
 	<p>I'm <span class="text-cyan-200">Nhat Ngo.</span></p>
