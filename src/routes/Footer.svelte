@@ -4,7 +4,7 @@
 
 <footer class="p-4 sm:p-6 font-mono">
 	<div class="sm:flex sm:items-center sm:justify-between">
-		<span class="text-sm sm:text-center">
+		<span class="collapse md:visible text-sm sm:text-center">
             © {currentYear} Nhat Ngo. All rights reserved.
         </span>
 		<div class="flex mt-4 sm:justify-center sm:mt-0">
