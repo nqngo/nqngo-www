@@ -1,26 +1,24 @@
 <script>
 	import Header from './Header.svelte';
+	import Footer from './Footer.svelte';
 	import '../app.css';
 	export const currentYear = new Date().getFullYear();
 </script>
 
 <div id="crt" class="app">
-	<!-- slowly moving scanline -->
-	<div class="scanline"></div>
-	<!-- the input and output -->
+
+	<div class="scanline" />
+
 	<div class="terminal">
-	<Header />
+		<Header />
 
 		<main>
 			<slot />
 		</main>
 
-		<footer class="font-mono">
-			<p>Copyright © {currentYear} Nhat Ngo. All rights reserved.</p>
-		</footer>
+		<Footer />
 	</div>
 </div>
 
 <style>
-
 </style>
