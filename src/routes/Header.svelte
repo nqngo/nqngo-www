@@ -8,7 +8,7 @@
 	<nav class="font-mono px-2 sm:px-4 py-2.5 rounded">
 		<div class="container flex flex-wrap items-center justify-between mx-auto">
 			<a href="/" class="flex items-center">
-				<img src="{logo}" class="h-14 mt-2" alt="Logo" />
+				<img src="{logo}" class="invisible md:visible h-14 mt-2" alt="Logo" />
 			</a>
 		<ul class="flex flex-col">
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}
