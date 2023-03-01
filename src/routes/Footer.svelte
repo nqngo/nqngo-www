@@ -1,6 +1,4 @@
 <script>
-	import GithubLogo from '$lib/images/github.svg';
-    import LinkedInLogo from '$lib/images/linkedin.svg';
 	export const currentYear = new Date().getFullYear();
 </script>
 
