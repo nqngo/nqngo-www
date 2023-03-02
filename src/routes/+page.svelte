@@ -13,7 +13,7 @@
 	<p>I'm <span class="text-cyan-200">Nhat Ngo.</span></p>
 
 	<h2 id="roles" class="md:text-7xl text-5xl font-bold">
-	<Typewriter mode="loop" interval=80 unwriteInterval=15>
+	<Typewriter mode="loopOnce" interval=80 unwriteInterval=15>
 		<span class="text-slate-200">Security Engineer.</span>
 		<span class="text-slate-200">System Engineer.</span>
 		<span class="text-slate-200">OpenStack Operator.</span>
@@ -26,6 +26,7 @@
 		<span class="text-slate-200">Father of 3.</span>
 		<span class="text-slate-200">Ramen Lover.</span>
 		<span class="text-slate-200">Your friendly neighborhood Spider-Man.</span>
+		<span class="text-slate-200">Digital Maverick.</span>
 	</Typewriter>
 	</h2>
 
