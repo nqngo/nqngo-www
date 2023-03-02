@@ -1,5 +1,5 @@
-<script>
-	import { concurrent } from "svelte-typewriter";
+<script lang="ts">
+	import { concurrent } from 'svelte-typewriter/modes';
 	import Chat from "./Chat.svelte";
 </script>
 
