@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import logo from '$lib/images/logo.png';
 </script>
 
 <header class="flex-none">
@@ -9,13 +8,6 @@
 			<a href="/" class="flex items-center">
 			</a>
 			<ul class="flex flex-col">
-				<li
-					aria-current={$page.url.pathname === '/' ? 'page' : undefined}
-					class="p-3 mt-2 border border-slate-100 rounded-lg bg-slate-100
-				hover:bg-slate-400 hover:border-slate-400 hover:text-slate-100"
-				>
-					<a href="/">Home</a>
-				</li>
 				<li class="p-3 mt-2 w-auto">
 					<a href="https://github.com/nqngo" class="social">
 						<svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"
@@ -41,9 +33,3 @@
 		</div>
 	</nav>
 </header>
-
-<style>
-	li[aria-current='page'] {
-		display: none;
-	}
-</style>
