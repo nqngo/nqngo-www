@@ -1,6 +1,6 @@
 {
 	"name": "nqngo-www",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -38,6 +38,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"daisyui": "^2.51.3"
+		"chatgpt": "^5.1.2",
+		"daisyui": "^2.51.3",
+		"unfetch": "^5.0.0"
 	}
 }

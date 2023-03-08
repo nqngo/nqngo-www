@@ -1,6 +1,6 @@
-<script lang="ts">
+<script>
 	import { concurrent } from 'svelte-typewriter/modes';
-	import Chat from "./Chat.svelte";
+	import ChatModal from "./ChatModal.svelte";
 </script>
 
 <label for="chatbox" class="absolute bottom-8 p-3 mt-2 border-2 rounded-lg mx-auto round text-slate-100">
@@ -11,4 +11,4 @@
 	<span use:concurrent={{ interval: 180 }}>&gt;_ Ask me anything...</span>
 </label>
 
-<Chat />
+<ChatModal />

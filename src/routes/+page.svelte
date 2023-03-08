@@ -1,11 +1,16 @@
 <script>
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import Typewriter from 'svelte-typewriter';
+
 </script>
 
 <svelte:head>
 	<title>Nhat Ngo</title>
 	<meta name="description" content="Nhat Ngo" />
 </svelte:head>
+
+<Header />
 
 <section>
 	<h1 id="greeting" class="md:text-8xl text-6xl font-extrabold">
@@ -31,3 +36,5 @@
 	</h2>
 
 </section>
+
+<Footer />
