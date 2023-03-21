@@ -38,8 +38,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"chatgpt": "^5.1.2",
 		"daisyui": "^2.51.3",
+		"openai": "^3.2.1",
 		"unfetch": "^5.0.0"
 	}
 }
