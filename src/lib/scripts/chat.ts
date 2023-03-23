@@ -1,19 +1,20 @@
-import { writable } from "svelte/store";
+import { writable, get } from "svelte/store";
 
 export interface ChatMessage {
-  role: "[*_*]/" | "[O.O]-";
-  message: string;
+  role: "user" | "system" | "assistant";
+  content: string;
 }
 export let chatMessages = writable<ChatMessage[]>([]);
 
 export async function submitChat(prompt: ChatMessage) {
   chatMessages.update(oldMessages => [...oldMessages, prompt]);
+
   const response = await fetch('/chat', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(prompt),
+    body: JSON.stringify(get(chatMessages)),
   });
 
   let msg = '';
@@ -22,8 +23,8 @@ export async function submitChat(prompt: ChatMessage) {
     msg = "I'm sorry. Something went wrong. Please try again later.";
   } else {
     const { body } = await response.json();
-     msg = body.message;
+     msg = body.content;
   }
-  const output: ChatMessage = { role: '[O.O]-', message: msg };
+  const output: ChatMessage = { role: 'assistant', content: msg };
   chatMessages.update(oldMessages => [...oldMessages, output]);
 }

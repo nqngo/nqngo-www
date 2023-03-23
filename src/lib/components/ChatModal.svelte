@@ -7,7 +7,7 @@
 	function handleSubmit(event: Event) {
 		if (!question) return;
 
-		const message: ChatMessage = { role: '[*_*]/', message: question };
+		const message: ChatMessage = { role: 'user', content: question };
 
 		submitChat(message);
 		question = '';
@@ -20,9 +20,9 @@
 			msg = "I'm sorry. Something went wrong. Please try again later.";
 		} else {
 			const { body } = await response.json();
-			msg = body.message;
+			msg = body.content;
 		}
-		const init_prompt: ChatMessage = { role: '[O.O]-', message: msg };
+		const init_prompt: ChatMessage = { role: 'assistant', content: msg };
 		chatMessages.update((oldMessages) => [...oldMessages, init_prompt]);
 	});
 
@@ -34,7 +34,7 @@
 		<form class="flex flex-col h-full w-full" on:submit|preventDefault={handleSubmit}>
 			<div id="chatarea" class="grow text-slate-100">
 				{#each $chatMessages as chat}
-					<div>{chat.role} {chat.message}</div>
+					<div>[{chat.role}] {@html chat.content}</div>
 				{/each}
 				<div class="modal-action">
 					<label for="chatbox" class="btn border">End Convo</label>
