@@ -1,4 +1,3 @@
-import { Buffer } from 'buffer';
 import { type RequestHandler, type RequestEvent, json } from '@sveltejs/kit';
 import { Configuration, OpenAIApi} from "openai";
 
@@ -13,7 +12,7 @@ const openai = new OpenAIApi(configuration);
 const GPT_MODEL = 'gpt-3.5-turbo';
 const GPT_TEMPERATURE = 0.5;
 const GPT_FREQUENCY_PENALTY = 0.5;
-const INIT_PROMPT = Buffer.from(process.env.CHATGPT_INIT_PROMPT, 'base64').toString('utf-8');
+const INIT_PROMPT = process.env.CHATGPT_INIT_PROMPT;
 const INIT_MESSAGE = { role: 'user', content: INIT_PROMPT}
 let INIT_COMPLETION;
 
@@ -27,7 +26,7 @@ export const GET = ( async () => {
     messages: [ INIT_MESSAGE ],
   })
   const base_prompt = INIT_COMPLETION.data.choices[0].message;
-
+  console.log(base_prompt.content);
   return json({
     status: 200,
     body: {
