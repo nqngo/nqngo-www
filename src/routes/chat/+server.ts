@@ -1,3 +1,4 @@
+import { Buffer } from 'buffer';
 import { type RequestHandler, type RequestEvent, json } from '@sveltejs/kit';
 import { Configuration, OpenAIApi} from "openai";
 
@@ -26,6 +27,7 @@ export const GET = ( async () => {
     messages: [ INIT_MESSAGE ],
   })
   const base_prompt = INIT_COMPLETION.data.choices[0].message;
+
   return json({
     status: 200,
     body: {
